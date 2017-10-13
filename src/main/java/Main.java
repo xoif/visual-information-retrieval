@@ -21,17 +21,19 @@ import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 
 public class Main {
-    public static void main(String[] args)  {
+
+    public static void main(String[] args) {
 
         String simplicity50Path = "src\\main\\resources\\simplicity50";
         String searchImageFilePath = "src\\main\\resources\\simplicity50\\306.jpg";
 
         try {
             index(simplicity50Path);
-            search(searchImageFilePath, true);
+            search(searchImageFilePath, false);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -80,16 +82,41 @@ public class Main {
 
         ImageSearcher searcher;
         if (withCEDD) {
-            searcher  = new GenericFastImageSearcher(50, CEDD.class);
+            searcher = new GenericFastImageSearcher(50, CEDD.class);
         } else {
             searcher = new GenericFastImageSearcher(50, SimpleColorHistogram.class);
         }
 
         ImageSearchHits hits = searcher.search(img, ir);
+        List<Integer> hitAtPosition = new ArrayList<>();
+
         for (int i = 0; i < hits.length(); i++) {
             String fileName = ir.document(hits.documentID(i)).getValues(DocumentBuilder.FIELD_NAME_IDENTIFIER)[0];
-            System.out.println(hits.score(i) + ": \t" + fileName);
+            System.out.println(hits.score(i) + ": \t" + fileName + " in group: " + calculateGroup(fileName).toString());
+            if (calculateGroup(fileName) == ImageGroup.BUSSES) {
+                hitAtPosition.add(i + 1);
+                System.out.println("correct image found at position " + (i + 1));
+            }
         }
     }
+
+
+    protected enum ImageGroup {
+        BUSSES, DINOSAURS, ELEPHANTS, FLOWERS,
+        HORSES, NONE
+    }
+
+    private static ImageGroup calculateGroup(String filename) {
+        String group = filename.substring(filename.length() - 7, filename.length() - 6);
+        switch (Integer.parseInt(group)) {
+            case 3: return ImageGroup.BUSSES;
+            case 4: return ImageGroup.DINOSAURS;
+            case 5: return ImageGroup.ELEPHANTS;
+            case 6: return ImageGroup.FLOWERS;
+            case 7: return ImageGroup.HORSES;
+            default: return ImageGroup.NONE;
+        }
+    }
+
 }
 
