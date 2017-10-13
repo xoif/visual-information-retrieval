@@ -1,5 +1,6 @@
 import net.semanticmetadata.lire.builders.DocumentBuilder;
 import net.semanticmetadata.lire.builders.GlobalDocumentBuilder;
+import net.semanticmetadata.lire.imageanalysis.features.GlobalFeature;
 import net.semanticmetadata.lire.imageanalysis.features.global.CEDD;
 import net.semanticmetadata.lire.imageanalysis.features.global.SimpleColorHistogram;
 import net.semanticmetadata.lire.searchers.GenericFastImageSearcher;
@@ -29,7 +30,8 @@ import java.util.List;
 public class Main {
 
     private static String dash;
-    private static boolean useCEDD = true;
+    private static Class<? extends GlobalFeature> descriptor;
+
     private static ImageGroup compareResultWithImageGroup = ImageGroup.NONE;
     private static final int searchForFileNumber = 738;
 
@@ -44,10 +46,18 @@ public class Main {
         compareResultWithImageGroup = calculateGroup(searchImageFilePath);
 
         try {
+            descriptor = CEDD.class;
             index(simplicity50Path);
             search(searchImageFilePath);
-            useCEDD = false;
+
+            descriptor = SimpleColorHistogram.class;
+            index(simplicity50Path);
             search(searchImageFilePath);
+
+            descriptor = CustomColorHistogram.class;
+            index(simplicity50Path);
+            search(searchImageFilePath);
+
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -57,10 +67,8 @@ public class Main {
 
         ArrayList<String> images = FileUtils.getAllImages(new File(sourcePath), true);
 
-        // Creating a CEDD document builder and indexing all files.
-        GlobalDocumentBuilder globalDocumentBuilder = new GlobalDocumentBuilder(CEDD.class);
-        globalDocumentBuilder.addExtractor(CEDD.class);
-        globalDocumentBuilder.addExtractor(SimpleColorHistogram.class);
+        // Creating a document builder and index all files.
+        GlobalDocumentBuilder globalDocumentBuilder = new GlobalDocumentBuilder(descriptor);
 
         // Creating an Lucene IndexWriter
         IndexWriterConfig conf = new IndexWriterConfig(new WhitespaceAnalyzer());
@@ -97,13 +105,7 @@ public class Main {
             }
         }
         IndexReader ir = DirectoryReader.open(FSDirectory.open(Paths.get("src"+dash+"main"+dash+"resources"+dash+"index")));
-
-        ImageSearcher searcher;
-        if (useCEDD) {
-            searcher = new GenericFastImageSearcher(50, CEDD.class);
-        } else {
-            searcher = new GenericFastImageSearcher(50, SimpleColorHistogram.class);
-        }
+        ImageSearcher searcher = new GenericFastImageSearcher(50, descriptor);
 
         ImageSearchHits hits = searcher.search(img, ir);
         List<Double> hitsAtPosition = new ArrayList<>();
@@ -111,12 +113,12 @@ public class Main {
         for (int i = 0; i < hits.length(); i++) {
             String fileName = ir.document(hits.documentID(i)).getValues(DocumentBuilder.FIELD_NAME_IDENTIFIER)[0];
             System.out.println(hits.score(i) + ": \t" + fileName.substring(fileName.length() - 7) + " in group: " + calculateGroup(fileName).toString());
-            if (calculateGroup(fileName) == ImageGroup.BUSSES) {
+            if (calculateGroup(fileName) == compareResultWithImageGroup) {
                 hitsAtPosition.add((double) (i + 1));
                 System.out.println("correct image found at position " + (i + 1));
             }
         }
-        System.out.println("Mean Average Precision of " + (useCEDD ? "CEDD is " : "Color Histogram is ") + calculateMap(hitsAtPosition));
+        System.out.println("Mean Average Precision of " + descriptor.getSimpleName() + " is " + calculateMap(hitsAtPosition));
     }
 
     private static double calculateMap(List<Double> hitsAtPosition) {
