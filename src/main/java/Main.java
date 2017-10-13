@@ -30,6 +30,8 @@ public class Main {
 
     private static String dash;
     private static boolean useCEDD = true;
+    private static ImageGroup compareResultWithImageGroup = ImageGroup.NONE;
+    private static final int searchForFileNumber = 738;
 
     static {
         dash = System.getProperty("file.separator");
@@ -38,7 +40,8 @@ public class Main {
     public static void main(String[] args) {
 
         String simplicity50Path = "src"+dash+"main"+dash+"resources"+dash+"simplicity50";
-        String searchImageFilePath = "src"+dash+"main"+dash+"resources"+dash+"simplicity50"+dash+"306.jpg";
+        String searchImageFilePath = "src"+dash+"main"+dash+"resources"+dash+"simplicity50"+dash+searchForFileNumber +".jpg";
+        compareResultWithImageGroup = calculateGroup(searchImageFilePath);
 
         try {
             index(simplicity50Path);
@@ -144,7 +147,7 @@ public class Main {
         }
     }
 
-    public static boolean deleteDirectory(File directory) {
+    private static boolean deleteDirectory(File directory) {
         if(directory.exists()){
             File[] files = directory.listFiles();
             if(null!=files){
