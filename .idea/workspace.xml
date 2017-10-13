@@ -2,77 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b681333-da4b-4071-bd02-0cd07d441390" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src\main\resources\index/_0.cfe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src\main\resources\index/_0.cfs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src\main\resources\index/_0.si" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src\main\resources\index/_1.cfe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src\main\resources\index/_1.cfs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src\main\resources\index/_1.si" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src\main\resources\index/segments_2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src\main\resources\index/write.lock" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/CustomColorHistogram.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Main$ImageGroup.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/index/_0.cfe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/index/_0.cfs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/index/_0.si" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/index/segments_1" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/index/write.lock" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/306.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/308.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/309.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/310.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/318.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/319.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/324.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/330.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/333.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/347.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/440.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/447.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/449.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/453.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/462.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/467.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/468.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/481.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/488.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/498.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/553.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/554.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/561.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/562.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/564.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/565.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/567.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/568.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/574.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/578.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/636.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/639.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/641.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/643.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/644.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/645.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/647.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/652.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/659.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/663.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/731.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/733.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/734.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/738.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/744.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/746.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/748.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/755.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/758.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/simplicity50/775.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/index/_0.cfe" afterPath="$PROJECT_DIR$/src/main/resources/index/_0.cfe" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/index/_0.cfs" afterPath="$PROJECT_DIR$/src/main/resources/index/_0.cfs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/index/_0.si" afterPath="$PROJECT_DIR$/src/main/resources/index/_0.si" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/index/segments_1" afterPath="$PROJECT_DIR$/src/main/resources/index/segments_1" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/CustomColorHistogram.java" afterPath="$PROJECT_DIR$/src/main/java/CustomColorHistogram.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -847,12 +781,12 @@
       <workItem from="1507882369127" duration="439000" />
       <workItem from="1507884163900" duration="674000" />
       <workItem from="1507888054711" duration="2292000" />
-      <workItem from="1507896132282" duration="7918000" />
+      <workItem from="1507896132282" duration="8046000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26778000" />
+    <option name="totallyTimeSpent" value="26906000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -869,7 +803,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30547947" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.50547945" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34246576" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20274636" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
